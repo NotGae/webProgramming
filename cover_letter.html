@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="author" content="이용도" />
+    <meta name="description" content="자기소개서 웹페이지만들기 과제" />
+    <!-- <link rel="stylesheet" href="./main.css" /> -->
+    <title>202001809자기소개서</title>
+    <style>
+      html {
+        scroll-behavior: smooth;
+      }
+      body {
+        height: 100%;
+        width: 100%;
+      }
+      header {
+        background-color: bisque;
+        text-align: center;
+        position: fixed;
+        z-index: 1;
+        top: 0;
+        left: 0;
+        right: 0;
+      }
+      #index > ul > li {
+        display: inline;
+        margin-right: 50px;
+        background-color: whitesmoke;
+        border-radius: 20%;
+      }
+      a {
+        text-decoration-line: none;
+      }
+      a:hover {
+        color: orange;
+      }
+      ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+      }
+      section > ul > li,
+      section > ol > li {
+        margin-bottom: 20px;
+      }
+      body {
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+      }
+      main {
+        position: relative;
+        height: 100%;
+        top: 0vh;
+        transition: 1s;
+      }
+      section {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        font-size: 24px;
+        text-align: center;
+      }
+      dd {
+        font-size: 20px;
+      }
+      dt:hover {
+        cursor: pointer;
+        color: lightcyan;
+      }
+      img {
+        width: 200px;
+        height: 200px;
+        object-fit: cover;
+      }
+      img:hover {
+        cursor: pointer;
+      }
+      article {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        border-radius: 25%;
+        background-color: white;
+        width: 700px;
+        height: 700px;
+      }
+      #greeting {
+        background-color: lightyellow;
+      }
+      #greeting > p {
+        font-size: 24px;
+        text-align: center;
+      }
+      #lifetime {
+        background-color: lightgoldenrodyellow;
+      }
+      #hobby {
+        background-color: skyblue;
+      }
+      #favorite {
+        background-color: lightpink;
+      }
+      #goal {
+        background-color: lightcoral;
+      }
+      #contact {
+        background-color: lightgreen;
+        text-align: center;
+      }
+      aside {
+        position: relative;
+        top: 30vh;
+        left: 40vw;
+      }
+      footer {
+        text-align: center;
+        position: fixed;
+        z-index: 1;
+        right: 0;
+        left: 0;
+        bottom: 0;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- header태그에는 nav태그로 section태그의 id로 앵커설정 -->
+    <header>
+      <nav id="index">
+        <ul>
+          <li><a href="#greeting">인사말</a></li>
+          <li><a href="#lifetime">일대기</a></li>
+          <li><a href="#hobby">현재 취미</a></li>
+          <li>
+            <a href="#favorite">좋아하는 동물</a>
+          </li>
+          <li>
+            <a href="#goal">남은 올해 목표</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <!-- main태그에는 자기소개서의 중심내용  -->
+    <main>
+      <!-- section태그 하나마다 자기소개 주제하나 -->
+      <section id="greeting">
+        <h1>
+          안녕하세요<br />
+          공주대 컴퓨터공학과 3학년 이용도입니다.
+        </h1>
+        <aside>
+          <p>
+            <strong>자기소개 웹페이지입니다.</strong>
+          </p>
+        </aside>
+      </section>
+      <section id="lifetime">
+        <h3>일대기</h3>
+        <ol>
+          <li>2002년에 <strong>경기도 평택</strong>에서 태어남</li>
+          <li>
+            2008년에
+            <strong
+              ><a
+                href="https://pyeong-il-e.goept.kr/pyeong-il-e/main.do"
+                target="_blank"
+                >평일초등학교</a
+              ></strong
+            >에 입학
+          </li>
+          <li>
+            2014년에
+            <strong
+              ><a
+                href="https://shinhan-m.goept.kr/shinhan-m/main.do"
+                target="_blank"
+                >신한중학교</a
+              ></strong
+            >에 입학
+          </li>
+          <li>
+            2017년에
+            <strong
+              ><a
+                href="https://shinhan-h.goept.kr/shinhan-h/main.do"
+                target="_blank"
+                >신한고등학교</a
+              ></strong
+            >에 입학
+          </li>
+          <li>
+            2020년에 공주대학교 천안캠퍼스에
+            <a
+              href="https://computer.kongju.ac.kr/ZD1140/index.do"
+              target="_blank"
+              ><strong>컴퓨터공학부</strong></a
+            >로 입학
+          </li>
+          <li>2021년 9월에 <strong>운전병</strong>으로 군에 입대</li>
+          <li>2023년 3월에 군에서 전역</li>
+          <li>2023년 9월 공주대에 2학년 2학기로 복학</li>
+          <li>2024년 현재 공주대 컴퓨터공학과 3학년으로 재학중</li>
+        </ol>
+      </section>
+      <section id="hobby">
+        <h3>현재 취미</h3>
+        <!-- dd태그는 script태그 내에서 display:none으로 설정 -->
+        <dl>
+          <dt>강아지 산책시키기</dt>
+          <dd>
+            여름에는 하루 2번 30분씩, 겨울에는 하루 2번 20분, 1시간씩 하고
+            있습니다.
+          </dd>
+          <dt>1개 이상 알고리즘 문제 풀기</dt>
+          <dd>
+            요즘엔
+            <a href="https://programmers.co.kr/" target="_blank">프로그래머스</a
+            >란 사이트에서 문제를 풀고 있습니다.
+          </dd>
+          <dt>웨이트 트레이닝</dt>
+          <dd>일주일에 5번 1시간씩 운동을 하고 있습니다.</dd>
+        </dl>
+      </section>
+      <section id="favorite">
+        <!-- 테이블에는 동물들 사진 -->
+        <table>
+          <caption>
+            <strong>좋아하는 동물</strong>
+          </caption>
+          <tbody>
+            <!-- script로 채우기 -->
+          </tbody>
+        </table>
+      </section>
+      <section id="goal">
+        <h3>남은 올해 목표</h3>
+        <ul>
+          <li>알고리즘 문제 적어도 100개 풀기</li>
+          <li>
+            웹 프로그래밍 강의에서 배우는 내용과 비교해가며 NestJS같은 다른
+            프레임워크, 타입스크립트도 배우기
+          </li>
+          <li>성적장학금 받기</li>
+          <li>식단 유지하기</li>
+        </ul>
+      </section>
+    </main>
+    <footer id="contact">
+      <address>
+        이메일
+        <a href="mailto:yla262652@gmail.com">yla262652@gmail.com</a>
+      </address>
+    </footer>
+    <!-- 마우스 휠 한 번으로 다음 section태그로 넘어가는 scrtip태그 -->
+    <script>
+      const main = document.getElementsByTagName('main')[0];
+      const sections = document.getElementsByTagName('section');
+      let page = 0;
+      const lastPage = sections.length - 1;
+      window.addEventListener(
+        'wheel',
+        (e) => {
+          e.preventDefault(); // 원래 이벤트의 기본 동작을 실행하지 않도록 지정.
+          if (e.deltaY > 0) {
+            page++;
+          } else {
+            page--;
+          }
+          if (page < 0) {
+            page = 0;
+          } else if (page > lastPage) {
+            page = lastPage;
+          }
+          sections[page].scrollIntoView({
+            behavior: 'smooth',
+          });
+        },
+        { passive: false }
+      );
+    </script>
+    <!-- favorite태그 내의 테이블을 채우기 위한 script -->
+    <script>
+      let tbody = document.getElementsByTagName('tbody')[0];
+      const images = [
+        { src: './src/dog.jpg', alt: '강아지는 정말 좋은 친구입니다' },
+        { src: './src/cat.jpg', alt: '고양이는 귀엽습니다' },
+        { src: './src/panda.jpg', alt: '판다의 얼굴은 정말 특이합니다' },
+        {
+          src: './src/snack.jpg',
+          alt: '작은 뱀이 알을 먹는 모습은 은근 귀엽게 느껴집니다',
+        },
+        {
+          src: './src/elephant.jpg',
+          alt: '코끼리도 새끼 때는 귀여운 것 같습니다',
+        },
+        {
+          src: './src/owl.jpg',
+          alt: '올빼미의 동그란 눈은 참 인상적입니다',
+        },
+        {
+          src: './src/bats.jpg',
+          alt: '과일박쥐는 강아지를 닮은 것 같습니다',
+        },
+        {
+          src: './src/red_panda.jpg',
+          alt: '레서판다는 판다가 아닙니다',
+        },
+        {
+          src: './src/tanuki.jpg',
+          alt: '요즘엔 서울도심에 너구리가 나타난답니다',
+        },
+      ];
+      const rows = 3;
+      const cols = 3;
+      for (let i = 0; i < rows; i++) {
+        let row = '<tr>';
+        for (let j = 0; j < cols; j++) {
+          row += `<td><img src="${images[i * 3 + j].src}" alt="${
+            images[i * 3 + j].alt
+          }" onclick="focusImg(this)" /></td>`;
+        }
+        row += '</tr>';
+        tbody.insertAdjacentHTML('beforebegin', row);
+      }
+    </script>
+    <!-- 테이블 내의 이미지를 클릭 시 실행되는 메소드 작성 -->
+    <!-- 테이블 옆에 클릭한 이미지의 확장판과 설명이 article태그로 나온다 -->
+    <!-- 다른 이미지를 클릭 시, 이미지와 설명이 바뀐다 -->
+    <script>
+      function focusImg(e) {
+        let old_article = document.getElementsByTagName('article');
+        // 이미 article태그가 존재하면 이미지와 설명만 바꾸기
+        if (old_article.length != 0) {
+          Object.assign(old_article[0].childNodes[1], {
+            src: e.getAttribute('src'),
+            alt: e.getAttribute('alt'),
+          });
+          old_article[0].childNodes[2].textContent = e.getAttribute('alt');
+          return;
+        }
+        // e에는 클릭한 img태그의 정보가 담겨있다.
+        let base_src = e.getAttribute('src');
+        let description = e.getAttribute('alt');
+        let section = document.getElementById('favorite');
+
+        // 새로 만들어지는 elements들 생성
+        let new_article = document.createElement('article');
+        let new_img = document.createElement('img');
+        let new_p = document.createElement('p');
+        let closeBtn = document.createElement('button');
+
+        // 새로 만들어진 elements의 속성을 설정
+        closeBtn.setAttribute('id', 'closeBtn');
+        closeBtn.textContent = 'X';
+        closeBtn.setAttribute(
+          'style',
+          'font-size: 35px; align-self: flex-end; border: none; background-color:transparent;'
+        );
+        closeBtn.addEventListener('click', () => {
+          closeBtn.parentNode.remove();
+        });
+        Object.assign(new_img, {
+          src: base_src,
+          alt: description,
+        });
+        new_img.setAttribute(
+          'style',
+          'width: 500px; height: 500px; display: flex; border-radius: 50%; object-fit: cover;'
+        );
+        new_p.textContent = description;
+
+        // 새로 만들어진 태그를 자식 태그로 추가
+        new_article.append(closeBtn);
+        new_article.append(new_img);
+        new_article.append(new_p);
+        section.append(new_article);
+      }
+    </script>
+    <!-- 현재취미 section에서 dt(취미)를 클릭 시, dt(취미)에 해당하는 dd(상세내용)를 볼 수 있는 이벤트 -->
+    <script>
+      let dt = document.getElementsByTagName('dt');
+      let dd = document.getElementsByTagName('dd');
+      // 취미의 상세내용이 안보이도록 display none으로 설정
+      for (let i = 0; i < dd.length; i++) {
+        dd[i].style.display = 'none';
+      }
+      for (let i = 0; i < dt.length; i++) {
+        dt[i].addEventListener('click', () => {
+          if (dd[i].style.display == 'none') {
+            dd[i].style.display = 'block';
+          } else {
+            dd[i].style.display = 'none';
+          }
+        });
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<style>
+  label {
+    background-color: lightgray;
+    display: inline-block;
+    width: 100px;
+    text-align: center;
+  }
+  fieldset {
+    width: 60vw;
+  }
+  textarea {
+    width: 370px;
+    height: 100px;
+    resize: none;
+    vertical-align: middle;
+  }
+</style>
+<body>
+  <form action="">
+    <fieldset id="basic_info">
+      <legend>회원 기본 정보</legend>
+      <label for="userid">사용자 ID:</label>
+      <input type="text" name="userid" id="userid"><br>
+      <label for="password">비밀번호:</label>
+      <input type="password" name="password" id="password"><br>
+      <label for="password_check">비밀번호확인:</label>
+      <input type="password" name="password_check" id="password_check"><br>
+      <label for="email">메일주소:</label>
+      <input type="email" name="email" id="email"><br>
+      <label for="name">이름:</label>
+      <input type="text" name="name" id="name">
+    </fieldset>
+    <fieldset id="private_info">
+      <legend>개인 신상 정보</legend>
+      <label for="identification_number">주민등록번호:</label>
+      <input type="text" pattern="[0-9]+" name="identification_number" id="first_identification_number" maxlength="6"> -
+      <input type="text" pattern="[0-9]+"name="identification_number" id="second_identification_number" maxlength="7"><br>
+      <label for="birthday">생일:</label>
+      <input type="date" name="birthday" id="birthday"><br>
+      <label for="hobby">관심분야:</label>
+      <input type="checkbox" name="hobby" id="computer" value="computer">컴퓨터
+      <input type="checkbox" name="hobby" id="internet" value="internet">인터넷
+      <input type="checkbox" name="hobby" id="travel" value="travel">여행
+      <input type="checkbox" name="hobby" id="movie" value="movie">영화감상
+      <input type="checkbox" name="hobby" id="misic" value="misic">음악감상<br>
+      <label for="introduce_self">자기소개:</label>
+      <textarea name="introduce_self" id="introduce_self"></textarea>
+    </fieldset>
+
+    <button type="submit">회원가입</button>
+    <button type="reset">다시 입력</button>
+  </form>
+</body>
+</html>

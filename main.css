@@ -1,11 +1,11 @@
-html {
-  scroll-behavior: smooth;
-}
+html,
 body {
   height: 100%;
   width: 100%;
+  margin: 0;
+  padding: 0;
 }
-header {
+.index_header {
   background-color: bisque;
   text-align: center;
   position: fixed;
@@ -14,7 +14,12 @@ header {
   left: 0;
   right: 0;
 }
-#index li {
+.back_btn {
+  position: absolute;
+  background-color: lightgreen;
+  left: 0;
+}
+.index li {
   display: inline;
   margin-right: 50px;
   background-color: whitesmoke;
@@ -34,24 +39,17 @@ ul {
 section li {
   margin-bottom: 20px;
 }
-body {
-  margin: 0;
-  padding: 0;
-  overflow: hidden;
-}
-main {
-  position: relative;
+#main_intro {
   height: 100%;
-  top: 0vh;
   transition: 1s;
 }
-section {
+.intro {
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
-  height: 100vh;
+  height: 100%;
   font-size: 24px;
   text-align: center;
 }

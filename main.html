@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./main.css" />
+    <title>Document</title>
+    <style>
+      #main_home {
+        background-color: lightpink;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100%;
+      }
+      #profile {
+        background-color: lightblue;
+        width: 25vw;
+        text-align: center;
+        border-radius: 25%;
+      }
+      .link {
+        margin-right: 10px;
+        text-decoration: none;
+        border-radius: 25%;
+        background-color: lightgoldenrodyellow;
+      }
+      img[src='dog.jpg'] {
+        width: 300px;
+        height: 300px;
+        object-fit: cover;
+        border-radius: 25%;
+        margin-top: 30px;
+      }
+    </style>
+  </head>
+  <body>
+    <main id="main_home">
+      <section id="profile">
+        <img src="dog.jpg" alt="강아지" />
+        <p>자기소개 웹사이트</p>
+        <a href="cover_letter.html" class="link">자기소개</a>
+        <a href="signup.html" class="link">회원가입</a>
+      </section>
+    </main>
+  </body>
+</html>

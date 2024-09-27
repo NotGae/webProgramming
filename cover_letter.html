@@ -8,10 +8,19 @@
     <link rel="stylesheet" href="./main.css" />
     <title>202001809자기소개서</title>
   </head>
+  <style>
+    html {
+      scroll-behavior: smooth;
+    }
+    body {
+      overflow: hidden;
+    }
+  </style>
   <body>
     <!-- header태그에는 nav태그로 section태그의 id로 앵커설정 -->
-    <header>
-      <nav id="index">
+    <header class="index_header">
+      <nav class="index">
+        <a href="main.html" class="back_btn">첫화면으로</a>
         <ul>
           <li><a href="#greeting">인사말</a></li>
           <li><a href="#lifetime">일대기</a></li>
@@ -27,9 +36,9 @@
       </nav>
     </header>
     <!-- main태그에는 자기소개서의 중심내용  -->
-    <main>
+    <main id="main_intro">
       <!-- section태그 하나마다 자기소개 주제하나 -->
-      <section id="greeting">
+      <section id="greeting" class="intro">
         <h1>
           안녕하세요<br />
           공주대 컴퓨터공학과 3학년 이용도입니다.
@@ -40,7 +49,7 @@
           </p>
         </aside>
       </section>
-      <section id="lifetime">
+      <section id="lifetime" class="intro">
         <h3>일대기</h3>
         <ol>
           <li>2002년에 <strong>경기도 평택</strong>에서 태어남</li>
@@ -88,7 +97,7 @@
           <li>2024년 현재 공주대 컴퓨터공학과 3학년으로 재학중</li>
         </ol>
       </section>
-      <section id="hobby">
+      <section id="hobby" class="intro">
         <h3>현재 취미</h3>
         <!-- dd태그는 script태그 내에서 display:none으로 설정 -->
         <dl>
@@ -107,7 +116,7 @@
           <dd>일주일에 5번 1시간씩 운동을 하고 있습니다.</dd>
         </dl>
       </section>
-      <section id="favorite">
+      <section id="favorite" class="intro">
         <!-- 테이블에는 동물들 사진 -->
         <table>
           <caption>
@@ -118,7 +127,7 @@
           </tbody>
         </table>
       </section>
-      <section id="goal">
+      <section id="goal" class="intro">
         <h3>남은 올해 목표</h3>
         <ul>
           <li>알고리즘 문제 적어도 100개 풀기</li>
